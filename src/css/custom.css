@@ -1,0 +1,99 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+
+@font-face {
+	font-family: "InterRegular";
+	src: url("../../static/fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+	font-family: "InterBold";
+	src: url("../../static/fonts/Inter-Bold.ttf");
+}
+
+:root {
+  --ifm-color-primary: var(--inr-black);
+  --ifm-color-primary-dark: var(--inr-dark-blue);
+  --ifm-color-primary-darker: var(--inr-dark-blue);
+  --ifm-color-primary-darkest: var(--inr-dark-blue);
+  --ifm-color-primary-light: var(--inr-light-blue);
+  --ifm-color-primary-lighter: var(--inr-light-blue);
+  --ifm-color-primary-lightest: var(--inr-light-blue);
+  --ifm-code-font-size: 95%;
+
+  font-size: calc(1rem + 0.01vw) !important;
+	--inr-black: #011329;
+	--inr-cyan: #57ffff;
+	--inr-white: #ffffff;
+	--inr-dark-blue: #0161ea;
+	--inr-light-blue: #0ac1ed;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: var(--inr-light-blue);
+  --ifm-color-primary-dark: var(--inr-dark-blue);
+  --ifm-color-primary-darker: var(--inr-dark-blue);
+  --ifm-color-primary-darkest: var(--inr-dark-blue);
+  --ifm-color-primary-light: var(--inr-light-blue);
+  --ifm-color-primary-lighter: var(--inr-light-blue);
+  --ifm-color-primary-lightest: var(--inr-light-blue);
+}
+
+[data-theme='light'] {
+  --ifm-navbar-link-hover-color: var(--inr-light-blue);
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+  font-family: "InterRegular" !important;
+}
+
+.navbar__logo {
+	height: 1.5em;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+footer a:hover {
+  color: var(--inr-cyan) !important;
+}
+
+#__docusaurus > .main-wrapper {
+  display: flex;
+}
+
+.footer__link-item {
+  display: inline-block !important;
+  margin: .5em;
+}
+
+.footer__link-separator {
+  display: none;
+}
+
+footer a:hover svg {
+  color: red;
+}

@@ -1,0 +1,130 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+**/
+
+html[data-theme='dark'] .card {
+  background-color: #242526;
+  box-shadow: rgba(86, 91, 115, 0.15) 0px 8px 28px 4px !important;
+  box-shadow: 0 10px 20px rgba(86, 91, 115, 0.15), 0 0 6px rgba(86, 91, 115, 0.19);
+}
+
+#main {
+  font-size: calc(1rem + 0.01vw);
+  box-sizing: border-box !important;
+  margin: auto;
+}
+
+.grid {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+  grid-auto-rows: 1fr;
+  gap: 2.5em;
+  margin: 8em 0;
+  cursor: default;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: var(--inr-white);
+  padding: 2em;
+  gap: 1em;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 0 6px rgba(0,0,0,0.23);
+}
+
+.card:hover {
+  text-decoration: none;
+  transform: translateY(-8px);
+}
+
+/* Icon width normalization */
+
+.cardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75em;
+  width: 2.25em;
+}
+
+.faIcon {
+  margin-right: .5em;
+}
+
+#faIcon0 {
+  color: mediumseagreen;
+}
+
+#faIcon1 {
+  color: rebeccapurple;
+}
+
+#faIcon2 {
+  color: gold;
+}
+
+#faIcon3 {
+  color: royalblue;
+}
+
+img.faIcon {
+  height: 1em;
+}
+
+/* Text adjustment */
+
+.card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+
+.cardTitle {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+h2.cardTitle {
+  display: flex;
+  align-items: center;
+  font-size: 1.25em;
+}
+
+h2.cardTitle,
+.cardIcon {
+  color: var(--ifm-color-primary);
+}
+
+html[data-theme='dark'] h2.cardTitle,
+html[data-theme='dark'] h3.cardTitle,
+html[data-theme='dark'] .cardIcon {
+  color: var(--ifm-color-primary);
+}
+
+.disabled {
+  transform: none !important;
+  transition: none !important;
+  cursor: default;
+  background-color: whitesmoke;
+}
+
+.cardDescription {
+ width: 100%;
+ overflow: hidden;
+ margin-bottom: 0;
+}
+
+.disabled * {
+  color: gray !important;
+  filter: grayscale();
+}
